@@ -17,6 +17,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 //allow request to access image folder by request
 app.use("/images", express.static(path.join("backend/images")));
+app.use("/", express.static(path.join(__dirname, "angular")));
 
 //MongoDb connection
 const db = 'mongodb+srv://gopal:' + process.env.MONGO_ALTLAS_PW + '@cluster0-dr9sg.mongodb.net/test?retryWrites=true';
