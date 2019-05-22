@@ -598,8 +598,8 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\angularjs\angular-practice\angular-bootstrap\node_modules\bootstrap\dist\css\bootstrap.min.css */"./node_modules/bootstrap/dist/css/bootstrap.min.css");
-module.exports = __webpack_require__(/*! D:\angularjs\angular-practice\angular-bootstrap\src\styles.css */"./src/styles.css");
+__webpack_require__(/*! D:\angularjs-practice\angular-bootstrap-practice\angular-bootstrap\node_modules\bootstrap\dist\css\bootstrap.min.css */"./node_modules/bootstrap/dist/css/bootstrap.min.css");
+module.exports = __webpack_require__(/*! D:\angularjs-practice\angular-bootstrap-practice\angular-bootstrap\src\styles.css */"./src/styles.css");
 
 
 /***/ })
