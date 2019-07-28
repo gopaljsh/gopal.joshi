@@ -932,12 +932,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _auth_auth_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../auth/auth.service */ "./src/app/auth/auth.service.ts");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+
 
 
 
 var HeaderComponent = /** @class */ (function () {
-    function HeaderComponent(authService) {
+    function HeaderComponent(authService, elm, renderer) {
         this.authService = authService;
+        this.elm = elm;
+        this.renderer = renderer;
         this.userisAuthenticated = false;
         this.isOpen = false;
         this.openMenu = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
@@ -949,6 +953,26 @@ var HeaderComponent = /** @class */ (function () {
             .subscribe(function (isAuthenticated) {
             _this.userisAuthenticated = isAuthenticated;
         });
+        this.scrollObservable$ = Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["fromEvent"])(window, 'scroll');
+        var previousScrollPos = window.pageYOffset;
+        console.log(this.elm);
+        this.scrollSubscription$ = this.scrollObservable$.subscribe(function (evt) {
+            if (evt) {
+                if (window.innerWidth < 768) {
+                    var currentScrollPos = window.pageYOffset;
+                    if (previousScrollPos > currentScrollPos) {
+                        _this.renderer.setStyle(_this.elm.nativeElement.children[0], 'bottom', '0');
+                    }
+                    else {
+                        _this.renderer.setStyle(_this.elm.nativeElement.children[0], 'bottom', '-100px');
+                    }
+                    previousScrollPos = currentScrollPos;
+                }
+                else {
+                    //this.mobile = true;
+                }
+            }
+        });
     };
     HeaderComponent.prototype.onLogout = function () {
         this.authService.logoutUser();
@@ -959,6 +983,7 @@ var HeaderComponent = /** @class */ (function () {
     };
     HeaderComponent.prototype.ngOnDestroy = function () {
         this.userAuthSubscription.unsubscribe();
+        this.scrollSubscription$.unsubscribe();
     };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(),
@@ -970,7 +995,7 @@ var HeaderComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./header.component.html */ "./src/app/header/header.component.html"),
             styles: [__webpack_require__(/*! ./header.component.css */ "./src/app/header/header.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_auth_auth_service__WEBPACK_IMPORTED_MODULE_2__["AuthServiceComponent"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_auth_auth_service__WEBPACK_IMPORTED_MODULE_2__["AuthServiceComponent"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"]])
     ], HeaderComponent);
     return HeaderComponent;
 }());
@@ -1607,6 +1632,9 @@ var ProfileComponent = /** @class */ (function () {
         if (this.listenMenu !== undefined) {
             this.mobile = this.listenMenu;
         }
+    };
+    ProfileComponent.prototype.ngOnDestroy = function () {
+        this.resizeSubscription$.unsubscribe();
     };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
