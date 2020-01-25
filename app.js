@@ -20,7 +20,7 @@ app.use("/images", express.static(path.join("backend/images")));
 app.use("/", express.static(path.join(__dirname, "angular")));
 
 //MongoDb connection
-const db = 'mongodb+srv://gopal:' + process.env.MONGO_ALTLAS_PW + '@cluster0-dr9sg.mongodb.net/test?retryWrites=true';
+const db = 'mongodb+srv://gopal:UBxrYKbFJlTXouM8@cluster0-dr9sg.mongodb.net/test?retryWrites=true';
 mongoose.connect(db, { useCreateIndex: true, useNewUrlParser: true })
     .then(() => {
         console.log('Connected to database')
@@ -41,8 +41,5 @@ app.use((req, res, next) => {
 app.use("/api/posts", postRoutes);
 app.use("/api/user", userRoutes);
 app.use("/api", resumeRoutes);
-app.use((req, res, next) => {
-    res.sendFile(path.join(__dirname, "angular", "index.html"));
-});
 
 module.exports = app;
