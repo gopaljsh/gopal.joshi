@@ -41,5 +41,8 @@ app.use((req, res, next) => {
 app.use("/api/posts", postRoutes);
 app.use("/api/user", userRoutes);
 app.use("/api", resumeRoutes);
+app.use((req, res, next) => {
+    res.sendFile(path.join(__dirname, "angular", "index.html"));
+});
 
 module.exports = app;
