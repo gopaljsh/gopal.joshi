@@ -2587,26 +2587,14 @@ var QuizTestComponent = /** @class */ (function () {
     function QuizTestComponent(quizService) {
         this.quizService = quizService;
         this.congratulations = false;
-        this.javascript = [];
-        this.counter = 0;
     }
     QuizTestComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.quizService.getData()
             .subscribe(function (response) {
-            //this.renderQuestion(response);
             _this.javascript = response;
         });
     };
-    // renderQuestion(quiz: Quiz[]) {
-    //     for(let i = this.counter; i < quiz.length; i++) {
-    //         if(i == 3) {
-    //             return;
-    //         }    
-    //         this.javascript.push(quiz[i]);
-    //         this.counter = i; 
-    //     }
-    // }
     QuizTestComponent.prototype.checkResult = function (form) {
         var _this = this;
         var javascripts = Object.keys(form.value)
