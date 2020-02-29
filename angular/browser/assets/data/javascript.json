@@ -1,0 +1,58 @@
+[
+    {
+        "question": "Inside which HTML element do we put the JavaScript?",
+        "answeroption": {
+            "a": "<javascript>",
+            "b": "<js>",
+            "c": "<script>",
+            "d": "<scripting>"
+        },
+        "correctanswer": "<script>",
+        "incorrect": false
+    },
+    {
+        "question": "What is the correct JavaScript syntax to change the content of the HTML element below?",
+        "answeroption": {
+            "a": "document.getElementById('demo').innerHTML = 'Hello World!';",
+            "b": "document.getElementByName('p').innerHTML = 'Hello World!';",
+            "c": "document.getElement('p').innerHTML = 'Hello World!';",
+            "d": "#demo.innerHTML = 'Hello World!';"
+        },
+        "correctanswer": "document.getElementById('demo').innerHTML = 'Hello World!';",
+        "incorrect": false
+    },
+    {
+        "question": "Where is the correct place to insert a JavaScript?",
+        "answeroption": {
+            "a": "The <body> section",
+            "b": "The <html> section",
+            "c": "Both the <head> section and the <body> section are correct",
+            "d": "The <head> section"
+        },
+        "correctanswer": "Both the <head> section and the <body> section are correct",
+        "incorrect": false
+    },
+    {
+        "question": "What is the correct syntax for referring to an external script called 'xxx.js'?",
+        "answeroption": {
+            "a": "<script src='xxx.js'>",
+            "b": "<script name='xxx.js'>",
+            "c": "<script href='xxx.js'>",
+            "d": "<script link='xxx.js'>"
+        },
+        "correctanswer": "<script src='xxx.js'>",
+        "incorrect": false
+    },
+    {
+        "question": "How do you write 'Hello World' in an alert box?",
+        "answeroption": {
+            "a": "msgBox('Hello World');",
+            "b": "alertBox('Hello World');",
+            "c": "alert('Hello World');",
+            "d": "msg('Hello World');"
+        },
+        "correctanswer": "alert('Hello World');",
+        "incorrect": false
+    }
+
+]
