@@ -21,6 +21,7 @@ app.use("/", express.static(path.join(__dirname, "angular")));
 
 //MongoDb connection
 const db = 'mongodb+srv://gopal:' + process.env.MONGO_ALTLAS_PW + '@cluster0-dr9sg.mongodb.net/test?retryWrites=true';
+// mongoose.connect(db, { useCreateIndex: true, useNewUrlParser: true })
 mongoose.connect(db, { useCreateIndex: true, useNewUrlParser: true })
     .then(() => {
         console.log('Connected to database')
@@ -30,11 +31,11 @@ mongoose.connect(db, { useCreateIndex: true, useNewUrlParser: true })
     })
 //mongoose.set('useCreateIndex', true); one more way to get rid of error like collection.ensureIndex is deprecated.
 
-
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, PATCH, PUT, DELETE, OPTIONS");
+  res.setHeader("Content-Security-Policy", "default-src *; img-src *; script-src-elem *; style-src-elem * 'self' 'unsafe-inline'; style-src * 'self' 'unsafe-inline';");
   next();
 });
 
