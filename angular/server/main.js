@@ -2609,14 +2609,18 @@ var QuizTestComponent = /** @class */ (function () {
     };
     QuizTestComponent.prototype.onSubmit = function (form) {
         this.javascript = this.checkResult(form);
+        var falseCounter = 0;
         for (var _i = 0, _a = this.javascript; _i < _a.length; _i++) {
             var script = _a[_i];
             if (script.incorrect) {
-                this.congratulations = false;
+                falseCounter++;
             }
-            else {
-                this.congratulations = true;
-            }
+        }
+        if (falseCounter == 0) {
+            this.congratulations = true;
+        }
+        else {
+            this.congratulations = false;
         }
     };
     return QuizTestComponent;
