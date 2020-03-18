@@ -53,6 +53,29 @@
         },
         "correctanswer": "alert('Hello World');",
         "incorrect": false
+    },
+    {
+        "question": "How do you call a function named myFunction ?",
+        "answeroption": {
+            "a": "myFunction()",
+            "b": "call myFunction()",
+            "c": "call function myFunction()",
+            "d": "call().myFunction()"
+        },
+        "correctanswer": "myFunction()",
+        "incorrect": false
+    },
+    {
+        "question": "How to write an IF statement in JavaScript?",
+        "answeroption": {
+            "a": "if i == 5 then",
+            "b": "if (i == 5)",
+            "c": "if i = 5",
+            "d": "if i = 5 then"
+        },
+        "correctanswer": "if (i == 5)",
+        "incorrect": false
     }
+
 
 ]
