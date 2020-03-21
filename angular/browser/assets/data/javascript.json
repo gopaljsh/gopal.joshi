@@ -75,6 +75,39 @@
         },
         "correctanswer": "if (i == 5)",
         "incorrect": false
+    },
+    {
+        "question": "How does a WHILE loop start?",
+        "answeroption": {
+            "a": "while (i <= 10)",
+            "b": "while (i <= 10; i++)",
+            "c": "while i = 1 to 10",
+            "d": "while i = 1 to i++"
+        },
+        "correctanswer": "while (i <= 10)",
+        "incorrect": false
+    },
+    {
+        "question": "How does a FOR loop start?",
+        "answeroption": {
+            "a": "for (i = 0; i <= 5; i++)",
+            "b": "for (i <= 5; i++)",
+            "c": "for (i = 0; i <= 5)",
+            "d": "for i = 1 to 5"
+        },
+        "correctanswer": "for (i = 0; i <= 5; i++)",
+        "incorrect": false
+    },
+    {
+        "question": "How can you add a comment in a JavaScript?",
+        "answeroption": {
+            "a": "<!--This is a comment-->",
+            "b": "//This is a comment",
+            "c": "'This is a comment",
+            "d": "/*This is a comment*/"
+        },
+        "correctanswer": "//This is a comment",
+        "incorrect": false
     }
 
 
