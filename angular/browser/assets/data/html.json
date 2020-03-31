@@ -1,0 +1,108 @@
+[
+    {
+        "question": "What does HTML stand for?",
+        "answeroption": {
+            "a": "Hyper Text Markup Language",
+            "b": "Home Tool Markup Language",
+            "c": "Hyperlinks and Text Markup Language"
+        },
+        "correctanswer": "Hyper Text Markup Language",
+        "incorrect": false
+    },
+    {
+        "question": "Who is making the Web standards?",
+        "answeroption": {
+            "a": "Microsoft",
+            "b": "Google",
+            "c": "The World Wide Web Consortium",
+            "d": "Mozilla"
+        },
+        "correctanswer": "The World Wide Web Consortium",
+        "incorrect": false
+    },
+    {
+        "question": "Choose the correct HTML element for the largest heading:",
+        "answeroption": {
+            "a": "<h1>",
+            "b": "<h6>",
+            "c": "<heading>",
+            "d": "<head>"
+        },
+        "correctanswer": "<head>",
+        "incorrect": false
+    },
+    {
+        "question": "What is the correct HTML element for inserting a line break?",
+        "answeroption": {
+            "a": "<lb>",
+            "b": "<br>",
+            "c": "<break>"
+        },
+        "correctanswer": "<br>",
+        "incorrect": false
+    },
+    {
+        "question": "What is the correct HTML for adding a background color?",
+        "answeroption": {
+            "a": "<background>yellow</background>",
+            "b": "<body bg='yellow'>",
+            "c": "<body style='background-color:yellow;'>"
+        },
+        "correctanswer": "<body style='background-color:yellow;'>",
+        "incorrect": false
+    },
+    {
+        "question": "Choose the correct HTML element to define italic text",
+        "answeroption": {
+            "a": "<i>",
+            "b": "<b>",
+            "c": "<strong>",
+            "d": "<important>"
+        },
+        "correctanswer": "<i>",
+        "incorrect": false
+    },
+    {
+        "question": "What isChoose the correct HTML element to define emphasized text",
+        "answeroption": {
+            "a": "<italic>",
+            "b": "<i>",
+            "c": "<em>"
+        },
+        "correctanswer": "<em>",
+        "incorrect": false
+    },
+    {
+        "question": "What is the correct HTML for creating a hyperlink?",
+        "answeroption": {
+            "a": "<a name='http://www.w3schools.com'>W3Schools.com</a>",
+            "b": "<a href='http://www.w3schools.com'>W3Schools</a>",
+            "c": "<a url='http://www.w3schools.com'>W3Schools.com</a>",
+            "d": "<a>http://www.w3schools.com</a>"
+        },
+        "correctanswer": "<a href='http://www.w3schools.com'>W3Schools</a>",
+        "incorrect": false
+    },
+    {
+        "question": "Which character is used to indicate an end tag?",
+        "answeroption": {
+            "a": "^",
+            "b": "*",
+            "c": "/",
+            "d": "<"
+        },
+        "correctanswer": "/",
+        "incorrect": false
+    },
+    {
+        "question": "How can you open a link in a new tab/browser window?",
+        "answeroption": {
+            "a": "<a href='url' target='new'>",
+            "b": "<a href='url' target='_blank'>",
+            "c": "<a href='url' new>"
+        },
+        "correctanswer": "<a href='url' target='_blank'>",
+        "incorrect": false
+    }
+
+]
