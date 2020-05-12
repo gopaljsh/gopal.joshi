@@ -1,0 +1,100 @@
+[
+    {
+        "question": "Which of the following is correct?",
+        "answeroption": {
+            "a": "jQuery is a JSON Library",
+            "b": "jQuery is a JavaScript Library"
+        },
+        "correctanswer": "jQuery is a JavaScript Library",
+        "incorrect": false
+    },
+    {
+        "question": "jQuery uses CSS selectors to select elements?",
+        "answeroption": {
+            "a": "false",
+            "b": "true"
+        },
+        "correctanswer": "true",
+        "incorrect": false
+    },
+    {
+        "question": "Which sign does jQuery use as a shortcut for jQuery?",
+        "answeroption": {
+            "a": "the ? sign",
+            "b": "the % sign",
+            "c": "the $ sign"
+        },
+        "correctanswer": "the $ sign",
+        "incorrect": false
+    },
+    {
+        "question": "Look at the following selector: $('div'). What does it select?",
+        "answeroption": {
+            "a": "All div elements",
+            "b": "The first div element"
+        },
+        "correctanswer": "All div elements",
+        "incorrect": false
+    },
+    {
+        "question": "Is jQuery a library for client scripting or server scripting?",
+        "answeroption": {
+            "a": "Client scripting",
+            "b": "Server scripting"
+        },
+        "correctanswer": "Client scripting",
+        "incorrect": false
+    },
+    {
+        "question": "Is it possible to use jQuery together with AJAX?",
+        "answeroption": {
+            "a": "No",
+            "b": "Yes"
+        },
+        "correctanswer": "Yes",
+        "incorrect": false
+    },
+    {
+        "question": "The jQuery html() method works for both HTML and XML documents",
+        "answeroption": {
+            "a": "False",
+            "b": "True"
+        },
+        "correctanswer": "True",
+        "incorrect": false
+    },
+    {
+        "question": "What is the correct jQuery code to set the background color of all p elements to red?",
+        "answeroption": {
+            "a": "$('p').layout('background-color','red');",
+            "b": "$('p').manipulate('background-color','red');",
+            "c": "$('p').css('background-color','red');",
+            "d": "$('p').style('background-color','red');"
+        },
+        "correctanswer": "$('p').css('background-color','red');",
+        "incorrect": false
+    },
+    {
+        "question": "With jQuery, look at the following selector: $('div.intro'). What does it select?",
+        "answeroption": {
+            "a": "The first div element with id='intro'",
+            "b": "All div elements with id='intro'",
+            "c": "All div elements with class='intro'",
+            "d": "The first div element with class='intro'"
+        },
+        "correctanswer": "All div elements with class='intro'",
+        "incorrect": false
+    },
+    {
+        "question": "Which jQuery method is used to hide selected elements?",
+        "answeroption": {
+            "a": "hidden()",
+            "b": "hide()",
+            "c": "display(none)",
+            "d": "visible(false)"
+        },
+        "correctanswer": "hide()",
+        "incorrect": false
+    }
+
+]
